@@ -1,0 +1,17 @@
+{
+    "name": "<%= packageName %>",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test":"rm -rf ./testDir && node index.js"
+    },
+    "dependencies": {
+        "koa": "^2.13.1"
+        <% if (middleware.router) { %>
+            ,"koa-router": "^10.0.0"
+        <% } %>
+        <% if (middleware.static) { %>
+            ,"koa-static": "^5.0.0"
+        <% } %>
+    }
+}

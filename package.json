@@ -1,0 +1,20 @@
+{
+  "name": "koa-cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "repository": "git@github.com:chris-zhu/koa-cli.git",
+  "author": "chris <1633711653@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "rm -rf ./koa-cli && node index.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "execa": "^5.1.1",
+    "inquirer": "^8.1.1",
+    "koa": "^2.13.1",
+    "koa-router": "^10.0.0",
+    "koa-static": "^5.0.0"
+  }
+}
