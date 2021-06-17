@@ -31,11 +31,13 @@ fs.writeFileSync(
 )
 
 // 安装依赖
-// execa('yarn', {
-//   cwd: getRootPath(),
-//   stdio: [2, 2, 2]
-// })
+execa('yarn', {
+  cwd: getRootPath(),
+  stdio: [2,2,2]
+  // stdio: [2, 2, 2]
+})
 
 function getRootPath() {
-  return `./${config.packageName}`
+  // return `./${config.packageName}`
+  return './koa-cli'
 }
