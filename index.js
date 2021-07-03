@@ -31,7 +31,7 @@ fs.writeFileSync(
 )
 
 // 安装依赖
-execa('yarn', {
+await execa('yarn', {
   cwd: getRootPath(),
   stdio: [2,2,2]
   // stdio: [2, 2, 2]
