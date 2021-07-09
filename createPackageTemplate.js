@@ -4,6 +4,7 @@
 import ejs from 'ejs'
 import fs from 'fs'
 import path from 'path'
+import prettier from "prettier"
 
 export default (config) => {
   const packageTemplate = fs.readFileSync(path.resolve('./template/package.ejs'))
@@ -13,7 +14,7 @@ export default (config) => {
     middleware: config.middleware
   })
 
-  return code
+  return prettier.format(code, { parser: "json" })
 
 }
 

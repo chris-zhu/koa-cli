@@ -10,11 +10,13 @@
     "test": "rm -rf ./koa-cli && node index.js"
   },
   "dependencies": {
+    "chalk": "^4.1.1",
     "ejs": "^3.1.6",
     "execa": "^5.1.1",
     "inquirer": "^8.1.1",
     "koa": "^2.13.1",
     "koa-router": "^10.0.0",
-    "koa-static": "^5.0.0"
+    "koa-static": "^5.0.0",
+    "prettier": "^2.3.2"
   }
 }

@@ -1,43 +1,41 @@
 import fs from 'fs'
 import path from 'path'
 import execa from 'execa'
+import chalk from 'chalk'
 import { createConfig } from './config.js'
 import createIndexTemplate from './createIndexTemplate.js'
 import createPackageTemplate from './createPackageTemplate.js'
 
 import question from './question/index.js'
 
-// 输入层
 const answer = await question()
-
-// 适配层
 const config = createConfig(answer)
 
-console.log(config)
-
-// process 处理
-
+console.log(chalk.blue(`创建项目文件夹:${config.packageName}`))
 fs.mkdirSync(getRootPath())
 
-// output
+console.log(chalk.blue(`创建 index.js`))
 fs.writeFileSync(
-  path.resolve(getRootPath(), './index.js'),
+  // path.resolve(getRootPath(), './index.js'),
+  `${getRootPath()}/index.js`,
   createIndexTemplate(config)
 )
 
+console.log(chalk.blue(`创建 package.json`))
 fs.writeFileSync(
-  path.resolve(getRootPath(), './package.json'),
+  // path.resolve(getRootPath(), './package.json'),
+  `${getRootPath()}/package.json`,
   createPackageTemplate(config)
 )
 
 // 安装依赖
-execa('yarn', {
+console.log(chalk.blue(`安装依赖`))
+execa("yarn", {
   cwd: getRootPath(),
-  stdio: [2,2,2]
-  // stdio: [2, 2, 2]
-})
+  // stdio: [2, 2, 2],
+});
 
 function getRootPath() {
   // return `./${config.packageName}`
-  return './koa-cli'
+  return path.resolve(process.cwd(), config.packageName)
 }
