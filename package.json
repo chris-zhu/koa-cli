@@ -1,22 +1,20 @@
 {
   "name": "koa-cli",
   "version": "1.0.0",
+  "description": "koa-cli",
   "main": "index.js",
-  "type": "module",
-  "repository": "git@github.com:chris-zhu/koa-cli.git",
-  "author": "chris <1633711653@qq.com>",
-  "license": "MIT",
   "scripts": {
-    "test": "rm -rf ./koa-cli && node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "chalk": "^4.1.1",
-    "ejs": "^3.1.6",
-    "execa": "^5.1.1",
-    "inquirer": "^8.1.1",
-    "koa": "^2.13.1",
-    "koa-router": "^10.0.0",
-    "koa-static": "^5.0.0",
-    "prettier": "^2.3.2"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chris-zhu/koa-cli.git"
+  },
+  "keywords": [],
+  "author": "chris-zhu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chris-zhu/koa-cli/issues"
+  },
+  "homepage": "https://github.com/chris-zhu/koa-cli#readme"
 }
