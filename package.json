@@ -2,8 +2,7 @@
   "name": "koa-cli",
   "version": "1.0.0",
   "description": "koa-cli to build app",
-  "main": "index.ts",
-  "type": "module",
+  "main": "src/index.ts",
   "bin": "./bin/cli.js",
   "scripts": {
     "dev": "tsup src/index.ts --watch --onSuccess \"node dist/index.cjs\"",

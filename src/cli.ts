@@ -10,6 +10,23 @@ async function main(options: Options = {}) {
   const cli = cac(name)
 
   cli
+    .command('init', 'Init a koa-cli propject by default')
+    .option('-c, --custom', 'Custom by yourself', {
+      default: false
+    })
+    .action((_, options) => {
+      console.log(_)
+      console.log(options)
+    })
+
+  cli
+    .command('use [...modules]', 'Use preset modules')
+    .option('-l, --list', 'List of Modules you can use')
+    .action((modules: Array<string>, options)=>{
+      
+    })
+
+  cli
     .command('[...patterns]', 'Glob patterns', {
       ignoreOptionDefaultValue: true
     })
