@@ -11,9 +11,8 @@ async function main(options: Options = {}) {
 
   cli
     .command('init', 'Init a koa-cli propject by default')
-    .option('-c, --custom', 'Custom by yourself', {
-      default: false
-    })
+    .option('-p, --port', 'Input server port', { default: 1000 })
+    .option('-c, --custom', 'Custom by yourself', { default: false })
     .action((_, options) => {
       console.log(_)
       console.log(options)
@@ -22,9 +21,7 @@ async function main(options: Options = {}) {
   cli
     .command('use [...modules]', 'Use preset modules')
     .option('-l, --list', 'List of Modules you can use')
-    .action((modules: Array<string>, options)=>{
-      
-    })
+    .action((modules: Array<string>, options) => {})
 
   cli
     .command('[...patterns]', 'Glob patterns', {

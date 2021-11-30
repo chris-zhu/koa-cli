@@ -1,31 +1,19 @@
 # koa-cli
-koa-cli
-
-## input 
-name
-ts/js // todo
-port
-middware // to update
-database // todo
-apidoc // todo
-···
+A scaffold that inherits various commonly used middleware
 
 ## middleware 
 
-koa-anything
-
-jwt // todo
-
-database // todo
-
-apidoc // todo
+- [ ] koa-anything
+- [ ] jwt
+- [ ] database
+- [ ] apidoc
 
 ···
 ## commond
 
 初始化项目
 ```
-koa-cli init -y
+koa-cli init
 ```
 
 使用模块
@@ -41,5 +29,10 @@ koa-cli dev
 打包
 ```
 koa-cli build
+```
+
+使用帮助
+```
+koa-cli [...commond] -h
 ```
 
